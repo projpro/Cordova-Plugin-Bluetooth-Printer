@@ -21,7 +21,10 @@ var BTPrinter = {
     },
    printPOSCommand: function(fnSuccess, fnError, str){
       exec(fnSuccess, fnError, "BluetoothPrinter", "printPOSCommand", [str]);
-   }
+   },
+   printTextSizeAlign: function (fnSuccess, fnError, str, size, align) {
+        exec(fnSuccess, fnError, "BluetoothPrinter", "printTextSizeAlign", [str, size, align]);
+    },
 };
 
 module.exports = BTPrinter;
